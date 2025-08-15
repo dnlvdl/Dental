@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Extracción dental a bajo costo — Sofía Álvarez (USS)</title>
+
+<!-- Bootstrap + Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+  :root{
+    --bs-primary:#0f4aa5;
+    --border:#e6e9ef;
+    --muted:#6c757d;
+  }
+
+  /* Fondo: sin fixed en iOS para evitar saltos */
+  body{
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.92)),
+      url("https://nickytissue.co.uk/wp-content/uploads/2023/05/talent-sfondo-gif-mobile.jpg") center/cover no-repeat;
+    color:#111827;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+  }
+
+  .navbar{ background:#fff !important; border-bottom:1px solid var(--border); }
+
+  .card{ border:1px solid var(--border); border-radius:1rem; box-shadow:0 .25rem .75rem rgba(16,24,40,.04); }
+
+  .rounded-embed{ border:0; border-radius:.75rem; display:block; width:100%; height:100%; }
+
+  .btn-gradient{ background:var(--bs-primary); border-color:var(--bs-primary); color:#fff; }
+  .btn-gradient:hover{ filter:brightness(.95); color:#fff; }
+  .text-muted-2{ color:var(--muted)!important; }
+
+  /* Títulos fluidos SIN nowrap para evitar desbordes en móvil */
+  .title-fluid{ line-height:1.2; font-weight:600; font-size:clamp(1.25rem, 3.5vw, 2rem); }
+
+  /* Imágenes de tarjetas: altura fija razonable por breakpoint + object-fit */
+  .img-ajustada{ width:100%; height:220px; object-fit:cover; border-radius:.5rem; }
+  @media (max-width: 575.98px){ .img-ajustada{ height:180px; } }
+
+  /* Aspect ratios universales para iframes/imagenes */
+  .ratio-embed{ position:relative; width:100%; overflow:hidden; border-radius:.75rem; }
+  .ratio-embed > *{ position:absolute; inset:0; width:100%; height:100%; }
+
+  /* Map y Form: relación 4:3 en móvil, 16:9 desde md */
+  .ratio-embed--map, .ratio-embed--form{ padding-top:75%; }      /* 4:3 */
+  @media (min-width:768px){
+    .ratio-embed--map, .ratio-embed--form{ padding-top:56.25%; } /* 16:9 */
+  }
+
+  /* Asegurar altura usable aun dentro de tarjetas altas */
+  .min-embed{ min-height:320px; }
+  @media (min-width:768px){ .min-embed{ min-height:420px; } }
+
+  /* Corrección del toggler (a veces iOS oculta el icono si no hay borde) */
+  .navbar-toggler{ border-color:rgba(0,0,0,.1); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="#">
+      <i class="bi bi-heart-pulse text-primary"></i>
+      <span>Sofía Álvarez M. — Odontología</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#procedimientos">PROCEDIMIENTOS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ubicacion">UBICACIÓN Y HORARIOS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO/INTRO -->
+<section class="py-4">
+  <div class="container">
+    <div class="card p-4">
+      <div class="row g-4 align-items-stretch">
+        <!-- Extracción -->
+        <div class="col-lg-6">
+          <div class="card h-100 p-4 d-flex flex-column">
+            <div class="mb-3">
+              <span class="badge text-bg-primary">Actividad académica supervisada</span>
+            </div>
+            <h1 class="title-fluid mb-3">¡Extracción dental a bajo costo!</h1>
+            <ul class="list-unstyled small mb-4 text-muted-2">
+              <li class="mb-1"><i class="bi bi-check2-circle text-success me-2"></i>Atención profesional en clínica universitaria.</li>
+              <li class="mb-1"><i class="bi bi-check2-circle text-success me-2"></i>Bajo supervisión docente.</li>
+              <li class="mb-1"><i class="bi bi-check2-circle text-success me-2"></i>Extracción <strong>GRATIS</strong> (Cupos limitados).</li>
+            </ul>
+            <div class="mt-auto">
+              <a class="btn btn-outline-primary btn-lg w-100 w-lg-auto" href="#procedimientos">
+                <i class="bi bi-list-check me-2"></i>Ver procedimientos
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Profesional -->
+        <div class="col-lg-6">
+          <div class="card h-100 p-4 d-flex flex-column">
+            <h2 class="title-fluid text-center mb-3">Profesional</h2>
+            <p class="mb-4" style="text-align:justify;">
+              ¡Hola! Mi nombre es <strong>Sofía Álvarez</strong>, estudiante de <strong>Odontología</strong> de
+              <strong>5º año</strong> en la <strong>Universidad San Sebastián</strong>. Actualmente en búsqueda de
+              pacientes para completar la clínica integral.
+            </p>
+            <div class="mt-auto">
+              <a class="btn btn-outline-primary btn-lg w-100 w-lg-auto" href="#contacto">
+                <i class="bi bi-calendar-check me-2"></i>Solicitar evaluación
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div>
+  </div>
+</section>
+
+<!-- PROCEDIMIENTOS -->
+<section id="procedimientos" class="py-4">
+  <div class="container">
+    <div class="mb-3">
+      <h2 class="h3 mb-1">¿Qué procedimientos se realizan?</h2>
+      <small class="text-muted-2"><strong>Importante:</strong> Realizados por estudiante bajo supervisión docente y posterior a evaluación clínica.</small>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h3 class="h5 mb-2">&bull; Muelas del juicio erupcionadas</h3>
+          <p class="small text-muted-2 mb-2">Extracciones de terceros molares erupcionados, según indicación clínica.</p>
+          <img class="img-ajustada" loading="lazy"
+               src="https://cerrolaza.com/sites/default/files/styles/blog_imagen_grande/public/blog/2022-02/Principal_1.PNG?itok=3xaJopwZ"
+               alt="Muelas del juicio">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h3 class="h5 mb-2">&bull; Derivadas de ortodoncia</h3>
+          <p class="small text-muted-2 mb-2">Extracciones planificadas como parte del tratamiento ortodóncico.</p>
+          <img class="img-ajustada" loading="lazy"
+               src="https://ortodonciasalud.com.ar/wp-content/uploads/2007/09/alba12.jpg"
+               alt="Derivadas de ortodoncia">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h3 class="h5 mb-2">&bull; Fragmentos/Restos radiculares</h3>
+          <p class="small text-muted-2 mb-2">Extracciones de restos radiculares o fragmentos dentarios indicados.</p>
+          <img class="img-ajustada" loading="lazy"
+               src="https://hdenttuxtla.com/wp-content/uploads/2024/09/Serv-Extraccion-de-restos-radiculares-1-480x184.png"
+               alt="Fragmentos dentarios">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACIÓN -->
+<section id="ubicacion" class="py-4">
+  <div class="container">
+    <div class="text-center mb-3">
+      <h2 class="h3 mb-1">¿Dónde se realizará el procedimiento?</h2>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <!-- Info + Foto -->
+      <div class="col-md-6 d-flex">
+        <div class="card p-4 h-100 w-100">
+          <h3 class="h5 mb-3">Ubicación y horarios</h3>
+
+          <p class="mb-1"><strong>Dirección:</strong></p>
+          <ul class="mb-3"><li>Bellavista 7, Recoleta, Santiago, Chile (Universidad San Sebastián)</li></ul>
+
+          <p class="mb-1"><strong>Horarios:</strong></p>
+          <ul class="mb-3">
+            <li>Miércoles 11:00 hrs</li>
+            <li>Miércoles 12:00 hrs</li>
+          </ul>
+
+          <!-- Foto con ratio responsivo -->
+          <div class="ratio-embed" style="padding-top:56.25%"><!-- 16:9 siempre aceptado -->
+            <img src="https://lh4.googleusercontent.com/O9cidn4NNP_ADrPgejSgpolesesy-BiZOeeduX078o0Vpk0fq_UMhZVY-nT2-lrYLIxyPWp7-ru7dBlYTirE3Z0vhXPtzJqTjVGnCt2UPdPuPkBNEFzNgjRDXj-qz8afLj8LPwRPTUHbkoMWuQ6MSEfCtp9xFXlF_J9BcONT0qxPAe3rka5inyFA9ndIkw"
+                 alt="Universidad San Sebastián — Sede Bellavista" style="object-fit:cover;">
+          </div>
+          <div class="small text-muted mt-2">Universidad San Sebastián — Sede Bellavista</div>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="col-md-6 d-flex">
+        <div class="card p-3 h-100 w-100">
+          <div class="ratio-embed ratio-embed--map min-embed">
+            <iframe
+              class="rounded-embed"
+              title="Mapa — Universidad San Sebastián, Bellavista"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.402410719606!2d-70.6385626!3d-33.4344573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c50bda4de47f%3A0x95dbed9c0e3bff54!2sUniversidad%20San%20Sebasti%C3%A1n%2C%20Sede%20Bellavista!5e0!3m2!1ses-419!2scl!4v1690000000000!5m2!1ses-419!2scl"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-4">
+  <div class="container">
+    <div class="mb-3">
+      <h2 class="h3 mb-1">Envíame un mensaje para una evaluación</h2>
+      <small>Nombre completo, correo, teléfono y radiografía (si tienes)</small>
+    </div>
+
+    <div class="card p-4">
+      <p class="text-muted-2 mb-3">El formulario permite subir archivos (imagen o PDF). Google Forms puede pedir iniciar sesión para adjuntar.</p>
+
+      <!-- Form incrustado -->
+      <div class="ratio-embed ratio-embed--form min-embed mb-3">
+        <iframe
+          class="rounded-embed"
+          title="Formulario de evaluación — Sofía Álvarez"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe6ezfFRhN9bkPBAuIzffyWCJyrVZ8BZNoXIO_i7jDi3RCMzA/viewform?embedded=true"
+          loading="lazy"></iframe>
+      </div>
+
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-gradient" href="#contacto"><i class="bi bi-send me-2"></i>Enviar desde el formulario</a>
+        <a class="btn btn-outline-primary"
+           href="mailto:smenesesa@correo.uss.cl?subject=Evaluaci%C3%B3n%20Cl%C3%ADnica&body=Hola%20Sof%C3%ADa%2C%20me%20gustar%C3%ADa%20agendar%20una%20evaluaci%C3%B3n.%20Mis%20datos%20son%3A">Enviar por correo</a>
+        <a class="btn btn-success"
+           href="https://wa.me/56946521394?text=Hola%20Sof%C3%ADa,%20me%20gustar%C3%ADa%20solicitar%20una%20evaluaci%C3%B3n"
+           target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-4">
+  <div class="container text-center text-muted small">© <span id="y"></span> Sofía Álvarez M. — Universidad San Sebastián</div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
